@@ -1,0 +1,114 @@
+<div>   display:flex || inline-flex     伸缩容器-Flex-Container
+伸缩项 - Flex Item
+
+主轴 - main axis
+侧轴 - cross axis
+
+伸缩项将按主轴和侧轴的方向进行排列
+
+flex-direction 
+(伸缩容器)
+改变主轴的方向
+row(default)	主轴向右侧轴向下
+row-reverse	主轴向左侧轴向下
+column		主轴向下侧轴向右
+colunn-reverse	主轴向上侧轴向右
+
+flex-wrap   (伸缩容器)
+改变侧轴的方向
+nowrap(default)
+wrap
+wrap-reverse
+
+flex-direction和flex-wrap的缩写方式
+flex-flow:<'flex-direction'>||<'flex-wrap'>
+
+order(伸缩项)
+改变指定伸缩项的位置
+order:<integer>	每一个默认是0
+
+jsutify-content(伸缩容器)
+控制伸缩项在主轴的展现方式
+flex-start(default)
+flex-end
+center
+space-between
+space-around
+
+align-items(伸缩容器)
+控制伸缩项在侧轴的展现方式
+stretch(default)
+flex-start
+flex-end
+baseline
+
+align-self(伸缩项)
+控制指定伸缩项在侧轴的展现方式
+stretch(default)
+flex-start
+flex-end
+baseline
+
+align-content(伸缩容器)
+控制伸缩项所组成的行（列）在侧轴的展现方式
+stretch(default)
+flex-start
+flex-end
+center
+space-between
+space-around
+*该属性在伸缩行（列）只有一行（列）的时候不生效
+
+flex-grow(伸缩项)
+控制伸缩项在伸缩行的伸展程度
+flex-grow:<integer>
+
+flex-shrink(伸缩项)
+控制伸缩项在伸缩行的收缩程度
+flex-shrink:<integer>
+
+flex-basis(伸缩项)
+定义伸缩项伸缩前的尺寸
+flex-basis:<auto> | <length>
+*设置了grow或shrink的伸缩项将以这个尺寸为基准进行伸缩
+
+flex(伸缩项)
+flex-grow,shrink,basis的缩写形式
+none | [<'flex-grow'><'flex-shrink'>?||<'flex-basis'>]
+
+flex:none;
+0 0 auto
+
+使用flex简写形式时
+如果某个属性不写，那么他们的默认值是：
+flex-grow:1
+flex-shrink:1
+flex-basis:0
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/flex
+/* Basic values */
+flex: auto;
+flex: initial;
+flex: none;
+flex: 2;
+
+/* One value, unitless number: flex-grow */
+flex: 2;
+
+/* One value, width/height: flex-basis */
+flex: 10em;
+flex: 30px;
+
+/* Two values: flex-grow | flex-basis */
+flex: 1 30px;
+
+/* Two values: flex-grow | flex-shrink */
+flex: 2 2;
+
+/* Three values: flex-grow | flex-shrink | flex-basis */
+flex: 2 2 10%;
+
+/* Global values */
+flex: inherit;
+flex: initial;
+flex: unset;

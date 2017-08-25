@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox-弹性布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrap {
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* justify-content: space-around;
+            align-items: center; */
+        }
+
+        .wrap div {
+            background-color: skyblue;
+            width: 50px;
+            /* flex-grow:1; */
+            flex-basis: 100px;
+            height: 50px;
+        }
+
+        .wrap div:first-of-type {
+            background: pink;
+            /* flex-grow:2; */
+            /* align-self: flex-end; */
+        }
+
+        .wrap div:nth-of-type(2) {
+            background: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div>0</div>
+        <div>1</div>
+    </div>
+</body>
+
+</html>
